@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>MSIT Tube</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style src="index.css"></style>
-</head>
-<body>
+  <style src="index.css">
+    #LoginImg{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 25%;
+  }
 
+  #footer {
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: red;
+      color: white;
+      text-align: center;
+  }
+  </style>
+</head>
+
+<body>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -40,10 +57,38 @@
     <div class="col-sm-2 sidenav">
       <p><a href="#">Explore</a></p>
       <p><a href="#">Watch Later</a></p>
-      <p><a href="#">Platlist</a></p>
+      <p><a href="#">Playlist</a></p>
     </div>
     <div class="col-sm-8"> 
-      <img src="logo.png" id="LoginImg" width="200px">
+      <!--  -->
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <!-- <li data-target="#demo" data-slide-to="2"></li> -->
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="msit_logo.jpg" alt="msit_logo" width="100%" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="msitadv.jpg" alt="msitadv" width="100%" height="500">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      <!--  -->
       <br><br><br>
       <div class="row">
           <div class="col-sm-3"></div>
@@ -70,7 +115,7 @@
 </div>
 
 <footer class="container-fluid text-center">
-  <p id="fter">Copyright @ 2021 CIHL, HYDERABAD. All Rights Reserved.</p>
+  <p id="footer">Copyright © 2021 Consortium of Institutions of Higher Learning(CIHL), HYDERABAD. All Rights Reserved.</p>
 </footer>
 
 </body>

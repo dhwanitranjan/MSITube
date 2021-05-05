@@ -30,14 +30,14 @@ padding: 15px;
 .row.content {height:auto;} 
 }
 
-#LoginImg{
+/* #LoginImg{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-}
+} */
 
-#fter {
+/* #fter {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -45,4 +45,4 @@ padding: 15px;
     background-color: red;
     color: white;
     text-align: center;
- }
+ } */
