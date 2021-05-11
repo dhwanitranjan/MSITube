@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Revision</h2>
+
+<h3>Operators</h3>
+<p id="demo"></p>
+
+<h3>Data Type</h3>
+<p id="demo1"></p>
+
+<h3>Function</h3>
+<p id="demo2"></p>
+
+<h3>Object</h3>
+<p id="demo3"></p>
+
+<h3>Class</h3>
+<p id="demo4"></p>
+
+<h3>JSON</h3>
+<p id="demo5"></p>
+
+<script>
+var x = 10;
+x += 5;
+document.getElementById("demo").innerHTML = x;
+
+txt1 = "What a very ";
+txt1 += "nice day";
+document.getElementById("demo1").innerHTML = txt1;
+
+var f = 77;
+document.getElementById("demo2").innerHTML =
+"The temperature is " + toCelsius(f) + " Celsius";
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+} 
+
+// Create an object:
+var person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+  };
+
+// Display some data from the object:
+document.getElementById("demo3").innerHTML =
+person.fullName() + " is " + person.age + " years old.";
+
+// Class
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+}
+
+myCar = new Car("Ola Electric", 2021);
+document.getElementById("demo4").innerHTML =
+myCar.name + " - " + myCar.year;
+
+// JSON
+var text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+let res ="";
+
+obj = JSON.parse(text);
+for (let i=0; i<obj.employees.length; i++){
+  res += obj.employees[i].firstName + " " + obj.employees[i].lastName + "<br>";
+}
+document.getElementById("demo5").innerHTML = res;
+
+// Hover (Event)
+function mOver(obj) {
+  obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Mouse Over Me"
+}
+
+</script>
+
+<br>
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color: blue; padding: 10px;">
+Mouse Over Me</div>
+
+</body>
+</html>
